@@ -8,6 +8,7 @@
  */
 ;(function ( window, document ){
   'use strict';
+  
   function setPositionRelative ( el ) {
     var value = getComputedStyle(el).getPropertyValue("position");
     if ( value === 'static' ) {
@@ -40,7 +41,7 @@
     
     appendToParent: function ( el ) {
       var item = document.querySelector(el);
-      // set the position to the image || element
+      // set the image || element position
       setPositionRelative(item);
       
       return new Promise(function(resolve, reject) {
@@ -55,8 +56,8 @@
     },
     
     init: function ( ) {
-      var targters = document.getElementsByClassName('target-element');
-      Array.prototype.forEach.call(targters, function ( target ) {
+      var targets = document.getElementsByClassName('target-element');
+      Array.prototype.forEach.call(targets, function ( target ) {
         target.addEventListener('mouseenter', function ( e ) {        
           var el = e.target.children[0];
           el.innerHTML = e.target.getAttribute('data-text');
