@@ -39,10 +39,19 @@ position: relative;
     flex-flow: row wrap;
     z-index: 1000;
 }
-.text-point-element {
+
+.text-pointer-element {
   width: 80%;
   line-height: 1.4;
   text-align: center;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.pointer-element:hover > .text-pointer-element {
+  opacity: 1;
+  visibility: visible;
 }
 
 @keyframes fade {

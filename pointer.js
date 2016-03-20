@@ -42,7 +42,10 @@
       var item = document.querySelector(el);
       return new Promise(function(resolve, reject) {
         var div = document.createElement('div');
+        var p = document.createElement('p');
+        p.classList.add('text-pointer-element');
         div.classList.add('pointer-element');
+        div.appendChild(p);
         var element = item.appendChild(div);
         resolve(element);
       });
@@ -51,14 +54,11 @@
     init: function ( ) {
       var pointers = document.getElementsByClassName('pointer-element');
       var self = this;
-      
-      Array.prototype.forEach.call(pointers, function ( pointer ){
-        pointer.addEventListener('mouseenter', function ( e ) {
-          e.target.innerHTML = "<p class='text-point-element'> " + e.target.getAttribute('data-text') + '</p>';
-        }, false);
-        
-        pointer.addEventListener('mouseout', function ( e ) {
-          e.target.textContent = "";
+
+      Array.prototype.forEach.call(pointers, function ( pointer ) {
+        pointer.addEventListener('mouseenter', function ( e ) {        
+          var el = e.target.children[0];
+          el.innerHTML = e.target.getAttribute('data-text');
         }, false);
       })
     }
