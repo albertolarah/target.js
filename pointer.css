@@ -1,0 +1,51 @@
+#example {
+position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: #333;
+  background: url('http://2.bp.blogspot.com/-QaNRjiZREok/VpWjkzRaKMI/AAAAAAAADTM/uVACGOW870U/s640/1506927_575846435842531_1964182208_n.jpg') center no-repeat;
+  background-size: cover;
+}
+#example-two {
+  width: 100px;
+  height: 100px;
+  background-color: #219829;
+}
+
+.pointer-element {
+  position: absolute;
+  opacity: .7;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #e95b4d;
+  border: 3px solid #fff;
+  animation: 1s ease-in infinite alternate fade;
+  cursor: pointer;
+  transition: opacity .3s ease-in;
+}
+
+.pointer-element:hover {
+    animation: none;
+    opacity: .9;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    top: 0 !important;
+    left: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    z-index: 1000;
+}
+.text-point-element {
+  width: 80%;
+  line-height: 1.4;
+  text-align: center;
+}
+
+@keyframes fade {
+  0% { background-color: #E26659; }
+  100% { background-color: #c0392b; }
+}

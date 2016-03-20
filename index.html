@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pointer.js Lib | Escolha um ponto e mostre aquilo que quer</title>
+  <link rel="stylesheet" href="pointer.css">
+</head>
+<body>
+  <div id="example">
+    <div class="filho"></div>
+    <div class="other"></div>
+  </div>
+  <script src="pointer.js"></script>
+  <script>
+    Pointer.set([
+      {
+        el: '#example',
+        text: 'Esse é um lindo colar, feito com amor e tudo mais. Ótima peça! Cachicol de ótima de qualidade. ',
+        pointX: 100,
+        pointY: 420
+      },
+      {
+        el: '#example',
+        text: 'Cachicol de ótima de qualidade!',
+        pointX: 60,
+        pointY: 60
+      },
+      {
+        el: '#example',
+        text: 'Tênis allstar branco muito legal.',
+        pointX: 350,
+        pointY: 380
+      }
+    ]).init();
+  </script>
+</body>
+</html>
