@@ -35,7 +35,6 @@
           element.setAttribute('data-text',obj.text);
         });
       });
-      
       return this;
     },
     
