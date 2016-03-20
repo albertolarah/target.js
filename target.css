@@ -1,18 +1,4 @@
-#example {
-position: relative;
-  width: 500px;
-  height: 500px;
-  background-color: #333;
-  background: url('http://2.bp.blogspot.com/-QaNRjiZREok/VpWjkzRaKMI/AAAAAAAADTM/uVACGOW870U/s640/1506927_575846435842531_1964182208_n.jpg') center no-repeat;
-  background-size: cover;
-}
-#example-two {
-  width: 100px;
-  height: 100px;
-  background-color: #219829;
-}
-
-.pointer-element {
+.target-element {
   position: absolute;
   opacity: .7;
   width: 20px;
@@ -25,7 +11,7 @@ position: relative;
   transition: opacity .3s ease-in;
 }
 
-.pointer-element:hover {
+.target-element:hover {
     animation: none;
     opacity: .9;
     border-radius: 0;
@@ -40,16 +26,18 @@ position: relative;
     z-index: 1000;
 }
 
-.text-pointer-element {
+.text-target-element {
   width: 80%;
   line-height: 1.4;
   text-align: center;
   color: #fff;
   opacity: 0;
   visibility: hidden;
+  
+  cursor: default;
 }
 
-.pointer-element:hover > .text-pointer-element {
+.target-element:hover > .text-target-element {
   opacity: 1;
   visibility: visible;
 }

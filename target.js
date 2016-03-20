@@ -1,6 +1,6 @@
 /**
  * ----------------------------|
- * Pointer.js                  |
+ * Target.js                  |
  * ----------------------------|
  * author: Luis Vinícius       |
  * email: dev_luis@hotmail.com |
@@ -8,12 +8,17 @@
  */
 ;(function ( window, document ){
   'use strict';
+  function setPositionRelative ( el ) {
+    var value = getComputedStyle(el).getPropertyValue("position");
+    if ( value === 'static' ) {
+      el.style.position = 'relative';
+    }
+  };
   
-  function Pointer () {
-    this.elements = [];
+  function Target () {
   }
   
-  Pointer.prototype = { 
+  Target.prototype = { 
   
   /**
    * Set the element
@@ -34,17 +39,16 @@
       return this;
     },
     
-    addElement: function ( el ) {
-      this.elements.push(el);
-    },
-    
     appendToParent: function ( el ) {
       var item = document.querySelector(el);
+      // set the position to the image || element
+      setPositionRelative(item);
+      
       return new Promise(function(resolve, reject) {
         var div = document.createElement('div');
         var p = document.createElement('p');
-        p.classList.add('text-pointer-element');
-        div.classList.add('pointer-element');
+        p.classList.add('text-target-element');
+        div.classList.add('target-element');
         div.appendChild(p);
         var element = item.appendChild(div);
         resolve(element);
@@ -52,11 +56,9 @@
     },
     
     init: function ( ) {
-      var pointers = document.getElementsByClassName('pointer-element');
-      var self = this;
-
-      Array.prototype.forEach.call(pointers, function ( pointer ) {
-        pointer.addEventListener('mouseenter', function ( e ) {        
+      var targters = document.getElementsByClassName('target-element');
+      Array.prototype.forEach.call(targters, function ( target ) {
+        target.addEventListener('mouseenter', function ( e ) {        
           var el = e.target.children[0];
           el.innerHTML = e.target.getAttribute('data-text');
         }, false);
@@ -64,7 +66,7 @@
     }
   };
   
-  if ( !window.Pointer ) {
-    window.Pointer = new Pointer;
+  if ( !window.Target ) {
+    window.Target = new Target;
   }
 }(window, document));

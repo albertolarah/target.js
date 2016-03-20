@@ -3,16 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>Pointer.js Lib | Escolha um ponto e mostre aquilo que quer</title>
-  <link rel="stylesheet" href="pointer.css">
+  <link rel="stylesheet" href="target.css">
 </head>
 <body>
   <div id="example">
     <div class="filho"></div>
     <div class="other"></div>
   </div>
-  <script src="pointer.js"></script>
+  <style>
+    #example {
+      width: 500px;
+      height: 500px;
+      background-color: #333;
+      background: url('http://2.bp.blogspot.com/-QaNRjiZREok/VpWjkzRaKMI/AAAAAAAADTM/uVACGOW870U/s640/1506927_575846435842531_1964182208_n.jpg') center no-repeat;
+      background-size: cover;
+    }
+    #example-two {
+      width: 100px;
+      height: 100px;
+      background-color: #219829;
+    }
+  </style>
+  <script src="target.js"></script>
   <script>
-    Pointer.set([
+    Target.set([
       {
         el: '#example',
         text: 'Esse é um lindo colar, feito com amor e tudo mais. Ótima peça! Cachicol de ótima de qualidade. ',
