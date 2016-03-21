@@ -3,7 +3,7 @@
  * Target.js                  |
  * ----------------------------|
  * author: Luis Vinícius       |
- * email: dev_luis@hotmail.com |
+ * github: luisvinicius167
  *---------------------------- |
  */
 ;(function ( window, document ){
@@ -20,12 +20,6 @@
   }
   
   Target.prototype = { 
-  
-  /**
-   * Set the element
-   * @param el { element }
-   * @param point { array }
-   */
     
     set: function ( ) {
       var self = this;
@@ -33,9 +27,9 @@
         console.log(typeof arg)
         if (typeof arg === 'object') {
           self.appendToParent(arg.el).then(function ( element ) {
-            var positionStyle = 'top:' + arg.pointX + 'px;' + 'left:' + arg.pointY + 'px';
+            var positionStyle = 'top:' + arg.pointX + ';' + 'left:' + arg.pointY + ';';
             element.style.cssText += positionStyle;
-            element.setAttribute('data-text',arg.text);
+            element.setAttribute('data-text', arg.text);
           });
         }
       });
@@ -44,7 +38,6 @@
     
     appendToParent: function ( el ) {
       var item = document.querySelector(el);
-      // set the image || element position
       setPositionRelative(item);
       return new Promise(function ( resolve, reject ) {
         var div = document.createElement('div');
