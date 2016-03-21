@@ -1,7 +1,7 @@
 # target.js
-Choose targets elements and show the text who you want when the mouse hover the point.
+> Choose targets elements and show the text who you want when the mouse hover the point.
 
-### - How to install?
+### Installing
 
 ##### Npm:
 ```sh
@@ -16,8 +16,31 @@ Choose targets elements and show the text who you want when the mouse hover the 
 ##### Manual install:
 Just copy and paste the files present on 'dist' folder.
 
-### - API
+### Usage
+In this example, let's say you want target the 'look' element:
+
+```html
+ <div id="look" class="look-box">
+   <img src="http://link.to.image.com" alt="My look">
+ </div>
+ ```
+ 
+ Call set function to add the element, and the init function after and see the magic happen:
+ 
+ ```javascript
+  target.set( 
+    {
+      el: '#look'
+      text: 'Nice product.',
+      pointX: '1rem', 
+      pointY: '2rem'
+    } 
+  ).init();
+ ```
+ 
+### API
 ``` Target.set( obj ) ```: Set the targets elements. Arguments needs to be object.
+
 ```javascript
   target.set( 
     {
