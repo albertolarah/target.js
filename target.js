@@ -24,17 +24,20 @@
   /**
    * Set the element
    * @param el { element }
-   * @param point { Array }
+   * @param point { array }
    */
     
-    set: function ( arr ) {
+    set: function ( ) {
       var self = this;
-      arr.forEach(function ( obj ) {
-        self.appendToParent(obj.el).then(function ( element ) {
-          var positionStyle = 'top:' + obj.pointX + 'px;' + 'left:' + obj.pointY + 'px';
-          element.style.cssText += positionStyle;
-          element.setAttribute('data-text',obj.text);
-        });
+      Array.prototype.forEach.call(arguments, function ( arg ) {
+        console.log(typeof arg)
+        if (typeof arg === 'object') {
+          self.appendToParent(arg.el).then(function ( element ) {
+            var positionStyle = 'top:' + arg.pointX + 'px;' + 'left:' + arg.pointY + 'px';
+            element.style.cssText += positionStyle;
+            element.setAttribute('data-text',arg.text);
+          });
+        }
       });
       return this;
     },
@@ -43,8 +46,7 @@
       var item = document.querySelector(el);
       // set the image || element position
       setPositionRelative(item);
-      
-      return new Promise(function(resolve, reject) {
+      return new Promise(function ( resolve, reject ) {
         var div = document.createElement('div');
         var p = document.createElement('p');
         p.classList.add('text-target-element');
@@ -67,6 +69,6 @@
   };
   
   if ( !window.Target ) {
-    window.Target = new Target;
+    window.target = new Target;
   }
 }(window, document));
