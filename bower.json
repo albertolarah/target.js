@@ -1,0 +1,23 @@
+{
+  "name": "target.js",
+  "description": "Show the description of a point in the element who you want.",
+  "main": "target.js",
+  "authors": [
+    "Luis Vinicius"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "target.js",
+    "images",
+    "target"
+  ],
+  "homepage": "https://github.com/luisvinicius167/target.js",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
