@@ -24,7 +24,6 @@
     set: function ( ) {
       var self = this;
       Array.prototype.forEach.call(arguments, function ( arg ) {
-        console.log(typeof arg)
         if (typeof arg === 'object') {
           self.appendToParent(arg.el).then(function ( element ) {
             var positionStyle = 'top:' + arg.pointX + ';' + 'left:' + arg.pointY + ';';
