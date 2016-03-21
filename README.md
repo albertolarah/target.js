@@ -1,6 +1,8 @@
 # target.js
 > Choose targets elements and show the text who you want when the mouse hover the point.
 
+See the <a href="http://luisvinicius167.github.io/target.js/">Demo</a>.
+
 ### Installing
 
 ##### Npm:
