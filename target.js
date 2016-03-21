@@ -3,7 +3,7 @@
  * Target.js                   |
  * ----------------------------|
  * author: Luis Vinícius       |
- * github: luisvinicius167
+ * github: luisvinicius167     |
  *---------------------------- |
  */
 ;(function ( window, document ){
