@@ -1,6 +1,6 @@
 /**
  * ----------------------------|
- * Target.js                  |
+ * Target.js                   |
  * ----------------------------|
  * author: Luis Vinícius       |
  * github: luisvinicius167
