@@ -4,25 +4,37 @@
 <head>
   <meta charset="UTF-8">
   <title>Target.js by luisvinicius167</title>
+  <meta name="keywords" content="target.js, points, image target">
+    <meta name="description" content="Choose targets elements and show the text who you want when the mouse hover the point.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
   <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
   <link rel="stylesheet" href="lib/target.min.css">
+   <!-- Facebook Meta -->
+    <meta property="og:locale" content="en">
+    <meta property="og:url" content="http://luisvinicius167.github.io/target.js">
+    <meta property="og:title" content="target.js">
+    <meta property="og:site_name" content="target.js">
+    <meta property="og:description" content="Choose targets elements and show the text who you want when the mouse hover the point.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://luisvinicius167.github.io/target.js/img/shoes.jpg">
+    <meta property="og:image:type" content="image/png">
   <script src="lib/target.min.js"></script>
 </head>
 
 <body>
+  <section class="container">
   <nav class="navbar">
     <h1 class="title">target.js</h1>
+       </p><p class="subtitle">star this <a href="https://github.com/luisvinicius167/target.js"> project</a>. develop by <a href="https://github.com/luisvinicius167">luisvincius167</a>.</p>
   </nav>
    <div class="gallery-example">
      <div class="item" id="product">
        <img src="img/shoes.jpg"" alt="Shoes">
      </div>
    </div>
-    <footer>
-      develop by <a href="#">luisvincius167</a>.
+   </section>
     <script>
       target.set(
         {
@@ -36,6 +48,12 @@
           text: 'Target.js is very simple. Star the project and start using in your projects!',
           pointX: '10rem',
           pointY: '21rem'
+        },
+        {
+          el: '#product',
+          text: 'What use have this project? Be creative.',
+          pointX: '16rem',
+          pointY: '35rem'
         }
       ).init();
       </script>
