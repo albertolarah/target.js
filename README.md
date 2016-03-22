@@ -1,5 +1,5 @@
 # target.js
-> Choose targets elements and show the text who you want when the mouse hover the point.
+> Choose target elements and show the text that you want when the mouse hover the point.
 
 See the <a href="http://luisvinicius167.github.io/target.js/">Demo</a>.
 
@@ -25,57 +25,58 @@ In this example, let's say you want target the 'look' element:
  <div id="look" class="look-box">
    <img src="http://link.to.image.com" alt="My look">
  </div>
- ```
- 
- Call set function to add the element, and the init function after and see the magic happen:
- 
+```
+
+Call ```set``` function to add the element, put the ```init``` function
+after it and then see the magic happen:
+
  ```javascript
-  target.set( 
+  target.set(
     {
       el: '#look'
       text: 'Nice product.',
-      pointX: '1rem', 
+      pointX: '1rem',
       pointY: '2rem'
-    } 
+    }
   ).init();
- ```
- 
+```
+
 ### API
 ``` Target.set( obj ) ```: Set the targets elements. Arguments needs to be object.
 
 ```javascript
-  target.set( 
+  target.set(
     {
       el: id of target element, // '#el'
-      text: the texto who you want to show, // 'this is awesome.'
+      text: the text that you want to show, // 'this is awesome.'
       pointX: the top value position of the point, // '10px'
       pointY: the left value position of the point // '1rem'
-    } 
+    }
   )
 ```
 
 ``` Target.init( ) ```: When you set the targets elements, you need to init the target event. Two ways:
 ```javascript
   // one way | Recommended
-  target.set( 
+  target.set(
     {
       el: id of target element, // '#el'
-      text: the texto who you want to show, // 'this is awesome.'
+      text: the text that you want to show, // 'this is awesome.'
       pointX: the top value position of the point, // '10px'
       pointY: the left value position of the point // '1rem'
-    } 
+    }
   ).init();
 
-  // two way
-  target.set( 
+  // alternative
+  target.set(
     {
       el: id of target element, // '#el'
-      text: the texto who you want to show, // 'this is awesome.'
+      text: the text that you want to show, // 'this is awesome.'
       pointX: the top value position of the point, // '10px'
       pointY: the left value position of the point // '1rem'
-    } 
+    }
   );
-  
+
   target.init();
 ```
 
